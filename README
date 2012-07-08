@@ -1,0 +1,19 @@
+A quick reference utility for TeX and LaTeX which interprets
+characters and their category codes etc., showing equivalent outputs etc.
+
+At the moment it only has very basic functionality, but more types of
+lookup may be added in future.
+
+Note that the category code information for each character was collected
+with LaTeX on my system, and I cannot guarantee that it is accurate with
+all configurations (though it will be accurate on most).
+
+If you want to fix something or add some features, patches are welcome!
+
+Licensed under GPLv3 (see LICENSE).
+
+Version history:
+2012-07-09  Version 0.1
+
+Authors:
+Kieran Clancy <clancy dot kieran at gmail>
