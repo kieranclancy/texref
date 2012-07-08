@@ -18,6 +18,10 @@ CATCODE  1: Begin group ({)
 CATCODE  2: End group (})
 ...
 
+$ texref {0..255} | grep 'cat: *10 '  # Get all chars with catcode 10
+ASCII  <HT> ^I     "0x09 = '0011 =   9 cat: 10 Space
+ASCII -> <- ^`     "0x20 = '0040 =  32 cat: 10 Space
+
 $ texref
 texref> help
 help        Show this help message
