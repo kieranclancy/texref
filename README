@@ -9,7 +9,7 @@ lookup may be added in future.
 
 Examples:
 $ texref 11      # note, there are two outputs because it is ambiguous
-Category code 11: Letter (a-zA-Z)
+CATCODE 11: Letter (a-zA-Z)
 ASCII  <VT> ^K     "0x0b = '0013 =  11 cat: 15 Invalid (<DEL>)
 
 $ texref {0..15} | grep ^CAT   # with expansion by bourne-style shell
