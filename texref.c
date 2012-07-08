@@ -76,8 +76,8 @@ static void show_help (void) {
            "<character> Information about <character>\n"
            "<number>    Information about character with this decimal value\n"
            "<catcode>   Information about catcode with this decimal value\n"
-           "\"<hex>     Information about character with this hex value\n"
-           "\'<oct>     Information about character with this octal value\n"
+           "\"<hex>      Information about character with this hex value\n"
+           "\'<oct>      Information about character with this octal value\n"
            "<other>     Information about each character in <other>\n");
 }
 
@@ -198,5 +198,5 @@ static void ronechar (int c) {
 
 static void catinfo (char c) {
     if (c < 0 || c > 15) return;
-    printf("Category code %02hhd: %s\n", c, catdesc[(int)c]);
+    printf("CATCODE %2hhd: %s\n", c, catdesc[(int)c]);
 }

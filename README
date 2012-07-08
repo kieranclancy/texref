@@ -1,8 +1,40 @@
 A quick reference utility for TeX and LaTeX which interprets
 characters and their category codes etc., showing equivalent outputs etc.
 
+It can either be used interactively, or from the command line where each
+argument is treated as a line of input.
+
 At the moment it only has very basic functionality, but more types of
 lookup may be added in future.
+
+Examples:
+$ texref 11      # note, there are two outputs because it is ambiguous
+Category code 11: Letter (a-zA-Z)
+ASCII  <VT> ^K     "0x0b = '0013 =  11 cat: 15 Invalid (<DEL>)
+
+$ texref {0..15} | grep ^CAT   # with expansion by bourne-style shell
+CATCODE  0: Escape (\)
+CATCODE  1: Begin group ({)
+CATCODE  2: End group (})
+...
+
+$ texref
+texref> help
+help        Show this help message
+quit        Quit the program
+...
+texref> a
+ASCII ->a<- ^!     "0x61 = '0141 =  97 cat: 11 Letter (a-zA-Z)
+texref> "0a
+ASCII  <LF> ^J     "0x0a = '0012 =  10 cat: 12 Other
+texref> '040
+ASCII -> <- ^`     "0x20 = '0040 =  32 cat: 10 Space
+texref> \c@t
+ASCII ->\<- ^<FS>  "0x5c = '0134 =  92 cat:  0 Escape (\)
+ASCII ->c<- ^#     "0x63 = '0143 =  99 cat: 11 Letter (a-zA-Z)
+ASCII ->@<- ^<NUL> "0x40 = '0100 =  64 cat: 12 Other
+ASCII ->t<- ^4     "0x74 = '0164 = 116 cat: 11 Letter (a-zA-Z)
+texref> ...
 
 Note that the category code information for each character was collected
 with LaTeX on my system, and I cannot guarantee that it is accurate with
